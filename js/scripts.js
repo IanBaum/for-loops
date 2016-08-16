@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   // Counter
   $("#userNumbers").submit(function(event) {
     event.preventDefault();
@@ -21,6 +22,7 @@ $(document).ready(function(){
       }
     }
   });
+
   // Word Puzzle
   $("#puzzleInfo").submit(function(event){
     event.preventDefault();
@@ -38,6 +40,7 @@ $(document).ready(function(){
 
   });
 
+  //Factorials
   $("#factorialInfo").submit(function(event){
     event.preventDefault();
 
@@ -48,8 +51,10 @@ $(document).ready(function(){
       outputNumber *= index;
     }
     $('#factorialOutput').text(outputNumber);
+
   });
 
+  //Palindromes
   $("#palindromeInfo").submit(function(event){
     event.preventDefault();
 
@@ -67,11 +72,11 @@ $(document).ready(function(){
     }
 
     for(var index = 0; index < Math.floor(noSpaceArray.length/2); index++){
-        firstHalfArray.push(noSpaceArray[index]);
+      firstHalfArray.push(noSpaceArray[index]);
     }
     console.log(firstHalfArray);
     for(var index = Math.ceil(noSpaceArray.length/2); index < noSpaceArray.length; index++){
-        secondHalfArray.push(noSpaceArray[index]);
+      secondHalfArray.push(noSpaceArray[index]);
     }
     console.log(secondHalfArray);
     secondHalfArray.reverse()
@@ -82,5 +87,37 @@ $(document).ready(function(){
       $("#palindromeOutput").text("This is not a Palindrome!")
     }
 
+  });
+
+  //Prime Sifting
+  $("#primeInfo").submit(function(event){
+    event.preventDefault();
+
+    var number = parseInt($("#primeNumber").val());
+    var startingArray = [];
+    var primeArray = []
+    var prime = 2;
+
+    for(var i = 2; i <= number; i++){
+      startingArray.push(i);
+    }
+
+    for(var i =0; i<= number; i++){
+      for(var j = i+1; j <= number; j++){
+        if(startingArray[j] % prime === 0){
+          startingArray[j] = -1;
+        }
+      }
+      prime += 1;
+    }
+    $('#primeOutput').text("");
+    for(var i = 0; i <startingArray.length; i++){
+      if(startingArray[i] != -1){
+        $('#primeOutput').append(" " + startingArray[i]);
+      }
+    }
+
+    console.log(startingArray);
+    console.log(primeArray);
   });
 });

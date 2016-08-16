@@ -11,6 +11,8 @@
   </head>
   <body>
     <div class="container">
+
+      <!-- Counter -->
       <h1>Counter</h1>
       <form id="userNumbers">
         <div class="row">
@@ -30,9 +32,12 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       <h3>Output:<span id="output"></span></h3>
-      <h1>Word puzzle</h1>
+
+      <!-- Word Puzzle -->
+
       <div class="row">
         <div class="col-sm-12">
+          <h1>Word puzzle</h1>
           <form id="puzzleInfo">
             <div class="form-group">
               <label for ="puzzleString">Enter a sentence to turn into a word puzzle!</label>
@@ -43,6 +48,8 @@
           <h3 id="puzzleOutput"></h3>
         </div>
       </div>
+
+      <!-- Factorial Numbers -->
       <div class="row">
         <div class="col-sm-12">
           <h1>Factorial Numbers</h1>
@@ -56,6 +63,7 @@
           <h3 id="factorialOutput"></h3>
         </div>
       </div>
+      <!-- Palindromes -->
       <div class="row">
         <div class="col-sm-12">
           <h1>Palindromes</h1>
@@ -67,6 +75,20 @@
             <button type="submit" class="btn btn-primary">Check for palindrome</button>
           </form>
           <h3 id="palindromeOutput"></h3>
+        </div>
+      </div>
+
+      <!-- Prime Sifting -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Prime Sifting</h1>
+          <form id="primeInfo">
+            <div class="form-group">
+              <label for="primeNumber">Enter a number to see or lesser prime numbers:</label>
+              <input type="number" class="form-control" id="primeNumber">            </div>
+              <button type="submit" class="btn btn-primary">Check for primes</button>
+          </form>
+          <h3 id="primeOutput"></h3>
         </div>
       </div>
     </div>
