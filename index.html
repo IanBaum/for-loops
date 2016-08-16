@@ -13,23 +13,62 @@
     <div class="container">
       <h1>Counter</h1>
       <form id="userNumbers">
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="countTo">Enter the number to count to:</label>
-            <input type="number" class="form-control" id="countTo">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="countTo">Enter the number to count to:</label>
+              <input type="number" class="form-control" id="countTo">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="countBy">Enter the number to count by:</label>
+              <input type="number" class="form-control" id="countBy">
+            </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="countBy">Enter the number to count by:</label>
-            <input type="number" class="form-control" id="countBy">
-          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <h3>Output:<span id="output"></span></h3>
+      <h1>Word puzzle</h1>
+      <div class="row">
+        <div class="col-sm-12">
+          <form id="puzzleInfo">
+            <div class="form-group">
+              <label for ="puzzleString">Enter a sentence to turn into a word puzzle!</label>
+              <input type="text" class="form-control" id="puzzleString">
+            </div>
+            <button type="submit" class="btn btn-primary">Make puzzle</button>
+          </form>
+          <h3 id="puzzleOutput"></h3>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <h3>Output:<span id="output"></span></h3>
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Factorial Numbers</h1>
+          <form id="factorialInfo">
+            <div class="form-group">
+              <label for="factorialNumber">Enter a number to factorialize:</label>
+              <input type="number" class="form-control" id="factorialNumber">
+            </div>
+            <button type="submit" class="btn btn-primary">Factorialize!</button>
+          </form>
+          <h3 id="factorialOutput"></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h1>Palindromes</h1>
+          <form id="palindromeInfo">
+            <div class="form-group">
+              <label for ="palindromeString">Enter a sentence to check if it is a palindrome!</label>
+              <input type="text" class="form-control" id="palindromeString">
+            </div>
+            <button type="submit" class="btn btn-primary">Check for palindrome</button>
+          </form>
+          <h3 id="palindromeOutput"></h3>
+        </div>
+      </div>
     </div>
   </body>
 </html>
